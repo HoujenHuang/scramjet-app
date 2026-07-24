@@ -1,159 +1,152 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap");
+* {
+    box-sizing: border-box;
+}
 
 body {
-	font-family: "Roboto", Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', sans-serif;
+    background: black;
+    color: lime;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+#browser-header {
+    border-bottom: 2px solid lime;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.nav-controls {
+    display: flex;
+    gap: 10px;
+    margin: 5px 0 5px 10px;
+    flex-shrink: 0;
+}
+
+.nav-controls button {
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.nav-controls button:hover {
+    background: lime;
+}
+
+.nav-controls svg {
+    width: 20px;
+    height: 20px;
+    fill: lime;
+    transition: background 0.2s;
+}
+
+.nav-controls svg:hover {
+    fill: black;
+}
+
+#sj-form {
+    flex: 1;
+    display: flex;
+}
+
+.search-container {
+    display: flex;
+    flex: 1;
+    gap: 10px;
+    align-items: center;
+}
+
+select, ::picker(select) {
+	appearance: base-select;
+}
+
+select {
+	font-family: "Courier New", monospace;
 	margin: 0;
-	background: #111;
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-}
-
-.flex-center {
-	display: flex;
-	justify-content: center;
-}
-
-.header-center {
-	align-items: center;
-	flex-direction: column;
-	margin-top: 10%;
-}
-
-.left-margin {
-	margin: 0px 16px;
-}
-
-#sj-frame {
+	background: black;
+	color: lime;
 	border: none;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	background-color: #111;
+	outline: none;
 }
 
-#sj-error {
-	color: #ff6666 !important;
-	white-space: pre-wrap;
+select:hover {
+    background: lime;
+    color: black;
 }
 
-#sj-error-code {
-	font-size: 12px;
-	color: #fff;
-	font-family: "Courier New", Courier, monospace;
+option {
+	background: black;
+    color: lime;
 }
 
-.logo {
-	height: 25vh;
+option:hover {
+	background: lime;
+	color: black;
 }
 
-.logo-wrapper .text {
-	font-size: 75px;
-	color: #fff;
-}
-
-.logo-wrapper h1 {
-	color: white;
-}
-
-footer {
-	margin: 0 16px;
-	margin-top: auto;
-	display: flex;
-	flex-direction: column;
-	line-height: 30px;
-	margin-bottom: 20px;
-}
-
-footer > div {
-	display: flex;
-	justify-content: left;
-	align-items: center;
-	flex-wrap: wrap;
-	margin-bottom: 15px;
-}
-
-footer a,
-footer span {
-	margin: 0 15px;
-	text-decoration: none;
-	color: #fff;
-	font-size: 15px;
-}
-
-footer a {
-	cursor: pointer;
-}
-
-footer a:hover {
-	text-decoration: underline;
-}
-
-.desc p {
-	width: 560px;
-	color: rgba(253, 253, 253, 0.514);
+.address-bar-wrapper {
+    flex: 1;
 }
 
 #sj-address {
-	background: none;
-	font-family: inherit;
-	padding: 0px 17px;
-	height: 48px;
-	border: 1px solid rgb(255, 255, 255, 0.2);
-	color: var(--text-color);
-	border-radius: 3px;
-	outline: none;
-	width: 350px;
-	margin-top: 5px;
-	border-radius: 50px;
-	color: #fff;
-	transition: border-radius 0.1s;
+    width: 100%;
+    background: black;
+    border: none;
+    border-left: 2px solid lime;
+    font-size: 16px;
+    padding: 10px 15px;
+    color: lime;
+    font-family: "Courier New", monospace;
+    outline: none;
 }
 
-#sj-address:focus {
-	border: 1px solid rgba(253, 253, 253, 0.514);
-	border-radius: 6px;
+#sj-address::placeholder {
+	color: lime;
 }
 
-.credit {
-	border-radius: 10px;
-	padding: 10px;
-	display: block;
-	border: #fff 1px solid;
-	color: #fff;
-	display: flex;
-	flex-wrap: wrap;
-	margin-bottom: 15px;
+#content-area {
+    flex-grow: 1;
+    position: relative;
 }
 
-.credit label {
-	margin-left: auto;
-	margin-right: 15px;
+#landing-view {
+    height: 100%;
+    padding: 10px;
 }
 
-.credit a,
-.credit label {
-	color: white;
-	text-decoration: underline;
-	text-align: right;
+a {
+	color: lime;
 }
 
-.credit pre {
-	display: none;
-	width: 100%;
+#frame-container {
+    display: none;
+    height: 100%;
+    width: 100%;
+    background: white;
 }
 
-.credit label::after {
-	content: "show license";
-	cursor: pointer;
+#sj-frame {
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
-.credit input:checked + label::after {
-	content: "hide license";
-}
-
-.credit input:checked ~ pre {
-	display: block;
-}
+body.is-active #landing-view { display: none; }
+body.is-active #frame-container { display: block; }
