@@ -1,9 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
-    <title>Scramjet</title>
+    <title>TERMINAL</title>
     <link rel="shortcut icon" content="favicon.webp" />
     <script src="/scram/scramjet.all.js"></script>
     <script src="/baremux/index.js"></script>
@@ -40,29 +40,28 @@
 
     <main id="content-area">
         <div id="landing-view">
-			<p>
-    	        ███████╗ ██████╗██████╗  █████╗ ███╗   ███╗     ██╗███████╗████████╗<br>
-				██╔════╝██╔════╝██╔══██╗██╔══██╗████╗ ████║     ██║██╔════╝╚══██╔══╝<br>
-				███████╗██║     ██████╔╝███████║██╔████╔██║     ██║█████╗     ██║   <br>
-				╚════██║██║     ██╔══██╗██╔══██║██║╚██╔╝██║██   ██║██╔══╝     ██║   <br>
-				███████║╚██████╗██║  ██║██║  ██║██║ ╚═╝ ██║╚█████╔╝███████╗   ██║   <br>
-				╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝ ╚════╝ ╚══════╝   ╚═╝   
+            <p>
+                ███████╗ ██████╗██████╗  █████╗ ███╗   ███╗     ██╗███████╗████████╗<br>
+                ██╔════╝██╔════╝██╔══██╗██╔══██╗████╗ ████║     ██║██╔════╝╚══██╔══╝<br>
+                ███████╗██║     ██████╔╝███████║██╔████╔██║     ██║█████╗     ██║   <br>
+                ╚════██║██║     ██╔══██╗██╔══██║██║╚██╔╝██║██   ██║██╔══╝     ██║   <br>
+                ███████║╚██████╗██║  ██║██║  ██║██║ ╚═╝ ██║╚█████╔╝███████╗   ██║   <br>
+                ╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝ ╚════╝ ╚══════╝   ╚═╝   
             </p>
 
-			Search Engine:
-            
+            Search Engine:
             <select id="sj-search-engine">
-            	<option value="https://www.google.com/search?q=%s">Google</option>
+                <option value="https://www.google.com/search?q=%s">Google</option>
                 <option value="https://www.bing.com/search?q=%s">Bing</option>
-                <option value="https://duckduckgo.com/?q=%s">DuckDuckGo</option>
+                <option value="https://duckduckgo.com/?q=%s" selected>DuckDuckGo</option>
                 <option value="https://search.brave.com/search?q=%s">Brave</option>
             </select><br>
 
-			Wisp Transport:
-			<select id="sj-transport">
-    			<option value="/libcurl/index.mjs">Libcurl</option>
-    			<option value="/epoxy/index.mjs">Epoxy</option>
-			</select><br><br>
+            Wisp Transport:
+            <select id="sj-transport">
+                <option value="/libcurl/index.mjs" selected>Libcurl</option>
+                <option value="/epoxy/module.js">Epoxy</option>
+            </select><br><br>
 
             <div class="links">
                 > <a href="https://github.com/MercuryWorkshop">Mercury Workshop</a><br>
